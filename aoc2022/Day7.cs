@@ -42,7 +42,7 @@ namespace adventofcode2022 {
 
         private static Dir GetDirStructure() {
             var lines = File.ReadAllLines(_INPUT_FILE);
-            Dir rootDir = new Dir("/", null);
+            Dir rootDir = new Dir("/");
             Dir curDir = rootDir;
 
             foreach (var line in lines) {
@@ -83,6 +83,11 @@ namespace adventofcode2022 {
         public Dir(string name, Dir previousDir) {
             this.name = name;
             this.previousDir = previousDir;
+        }
+
+        public Dir(string name) {
+            this.name = name;
+            this.previousDir = this;
         }
 
         public int GetTotalMemory() {
