@@ -1,6 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-using System.Diagnostics.Contracts;
-
 namespace adventofcode2022 {
     public class Day7 {
         private static readonly string _INPUT_FILE = "./input/day7.input";
