@@ -54,7 +54,7 @@ public class Day10 {
             if (!string.IsNullOrWhiteSpace(line)) {
                 var instruction = line.Split(" ")[0];
                 void CheckCycle() {
-                    if ((cycles%interval)-1 >= x-1  && (cycles%interval)-1 <= x+1) {
+                    if ((cycles%interval) >= x  && (cycles%interval) <= x+2) {
                         output.Add("#");
                     } else {
                         output.Add(".");
